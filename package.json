@@ -18,6 +18,7 @@
   "homepage": "https://github.com/waqasnasir/node-boilerplate-with-auth#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "http": "0.0.0",
     "lodash": "^4.17.15"
   }
 }
