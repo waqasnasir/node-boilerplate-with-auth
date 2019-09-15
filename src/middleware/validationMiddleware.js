@@ -2,7 +2,8 @@
 import joi from 'joi';
 
 export default (schema) => (req, res, next) => {
-  const { error } = joi.validate({ ...req.body, ...req.query }, schema, { abortEarly: false });
+  const { error } = joi.validate({ ...req.body, ...req.query, ...req.params },
+    schema, { abortEarly: false });
   const valid = error == null;
   if (valid) return next();
   const { details } = error;
