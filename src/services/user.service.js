@@ -30,11 +30,15 @@ const deleteUser = async (userId) => {
 const getUserById = async (userId) => {
   return User.findByPk(userId);
 };
+const getUserByEmail = async (email) => {
+  return User.findOne({ where: { email } });
+};
 
 export default {
   getAllUsers,
   createUser,
   updateUser,
   deleteUser,
-  getUserById
+  getUserById,
+  getUserByEmail
 };

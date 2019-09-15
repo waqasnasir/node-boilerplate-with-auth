@@ -1,3 +1,4 @@
 import validationMiddleware from './validationMiddleware';
+import authenticate from './authentication';
 
-export { validationMiddleware }
+export { validationMiddleware, authenticate };
